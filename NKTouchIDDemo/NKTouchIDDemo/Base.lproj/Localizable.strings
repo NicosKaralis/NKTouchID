@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  NKTouchIDDemo
+
+  Created by Nicos Belo Karalis on 5/3/15.
+  Copyright (c) 2015 Nicos Belo Karalis. All rights reserved.
+*/
+
+"touchID.reason" = "Tap to sign in";
