@@ -22,8 +22,12 @@ class ViewController: UIViewController {
 
   @IBAction func loginWithReason(sender: AnyObject) {
     if NKTouchID.canUseTouchID() {
-      NKTouchID.authenticateWithTouchId(reason: "Custom Tap to sign in", callback: { (success, error) in
-        println("Callback executed: \(success) : \(error)")
+      NKTouchID.authenticateWithTouchId(reason: "Custom reason", callback: { (success, error) in
+        if success {
+          println("Autheticated successfully");
+        } else {
+          println("Failed to authenticate: \(error!.localizedDescription)");
+        }
       })
     } else {
       println("TouchID not available")
@@ -33,7 +37,11 @@ class ViewController: UIViewController {
   @IBAction func loginWIthOutReason(sender: AnyObject) {
     if NKTouchID.canUseTouchID() {
       NKTouchID.authenticateWithTouchId(callback: { (success, error) in
-        println("Callback executed: \(success) : \(error)")
+        if success {
+          println("Autheticated successfully");
+        } else {
+          println("Failed to authenticate: \(error!.localizedDescription)");
+        }
       })
     } else {
       println("TouchID not available")

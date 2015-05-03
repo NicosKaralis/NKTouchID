@@ -9,7 +9,7 @@
 import LocalAuthentication
 
 let NKTouchIDErrorDomain = "NKTouchIDAuthenticationDomain";
-let reasonKey = "touchID.reason2"
+let reasonKey = "touchID.reason"
 typealias TouchIDCallback = (Bool, NSError?) -> Void
 
 class NKTouchID: NSObject {
